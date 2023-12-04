@@ -90,23 +90,6 @@ def series_to_timesequence(data, n_in=1, n_out=1, dropnan=True):
         agg.dropna(inplace=True)
     return agg.values
  
-### split a univariate dataset into train/test sets
-##def train_test_split(data, n_test):
-##    return data[:-n_test, :], data[-n_test:, :]
- 
-### fit an xgboost model and make a one step prediction
-##def xgboost_forecast(train, testX):
-##    # transform list into array
-##    train = np.asarray(train)
-##    # split into input and output columns
-##    trainX, trainy = train[:, :-1], train[:, -1]
-##    # fit model
-##    model = XGBRegressor(objective='reg:squarederror', n_estimators=1000)
-##    model.fit(trainX, trainy)
-##    # make a one-step prediction
-##    yhat = model.predict(np.asarray([testX]))
-##    return yhat[0]
-  
 def moving_average_inverse(last_ma_values,last_predicted_value,divide_by):
     
     one = (last_predicted_value)*(len(last_ma_values)+1)
@@ -119,12 +102,9 @@ def moving_average_inverse(last_ma_values,last_predicted_value,divide_by):
 def split_sequence(sequence, n_steps):
     X, y = list(), list()
     for i in range(len(sequence)):
-    # find the end of this pattern
-        end_ix = i + n_steps
-        # check if we are beyond the sequence
+            end_ix = i + n_steps
         if end_ix > len(sequence)-1:
             break
-    # gather input and output parts of the pattern
         seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
     X.append(seq_x)
     y.append(seq_y)
