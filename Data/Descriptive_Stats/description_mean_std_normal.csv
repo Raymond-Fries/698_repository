@@ -1,0 +1,11 @@
+,symbol,dow,mean_normal,std_normal,transformed
+0,AMD,0,True,True,True
+1,AMD,1,True,True,True
+2,AMD,2,True,True,True
+3,AMD,3,True,True,True
+4,AMD,4,True,True,True
+5,GOOG,0,True,True,True
+6,GOOG,1,True,True,True
+7,GOOG,2,False,True,True
+8,GOOG,3,True,True,True
+9,GOOG,4,True,True,True
