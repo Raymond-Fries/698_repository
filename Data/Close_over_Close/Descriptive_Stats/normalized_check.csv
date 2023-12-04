@@ -1,0 +1,12 @@
+,symbol,dataset,transformed,normal
+0,AMD,close_over_close,False,False
+1,AMZN,close_over_close,False,False
+2,BAC,close_over_close,False,False
+3,GM,close_over_close,False,False
+4,GOOG,close_over_close,False,False
+5,INTC,close_over_close,False,False
+6,MSFT,close_over_close,False,False
+7,PFE,close_over_close,False,False
+8,PYPL,close_over_close,False,False
+9,VZ,close_over_close,False,False
+10,XOM,close_over_close,False,False
